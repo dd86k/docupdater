@@ -1,4 +1,4 @@
-#!/bin/env rdmd
+#!/usr/bin/env rdmd
 
 /**
  * Script that automates the process of keeping documentation up to date.
@@ -165,6 +165,7 @@ int generateDoc(ref immutable(Entry) entry, string cacheDir, string outDir) {
 		break;
 	}
 
+	e = 0;
 L_EXIT:
 	chdir("..");
 	return e;
