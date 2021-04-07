@@ -147,7 +147,7 @@ int generateDoc(ref immutable(Entry) entry, string cacheDir, string outDir) {
 		version (Windows)
 			command = "copy "~sourceDir~`\* `~targetDir~NULL_REDIRECT;
 		else
-			command = "cp "~sourceDir~"/* "~targetDir~NULL_REDIRECT;
+			command = "cp -r "~sourceDir~"/* "~targetDir~NULL_REDIRECT;
 		if ((e = system(command.toStringz)) != 0) goto L_EXIT;
 		break;
 	case file:
